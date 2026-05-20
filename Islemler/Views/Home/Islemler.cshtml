@@ -1,0 +1,19 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+
+
+}
+
+<h1> İşlemler </h1>
+<hr />
+
+<form asp-action="IslemlerGET" method="get">
+<input type="number" id="txtSayi1" name="txtSayi1" />
+    <select name="oprt" id="oprt" title="operator" asp-items="@ViewBag.operatorListesi"> Operatör </select>
+<input type="number" id="txtSayi2" name="txtSayi2" />
+<input type="submit" id="btnHesapla" name="btnHesapla" value="=" />
+    <input type="text" id="txtSonuc" name="txtSonuc" value="@ViewBag.Sonuc" />
+</form>
