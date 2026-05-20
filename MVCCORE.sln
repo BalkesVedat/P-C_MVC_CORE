@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37203.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "HelloWorld\HelloWorld.csproj", "{BD70B0CA-4CC1-49A3-A9F8-60743D7CEA6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Islemler", "Islemler\Islemler.csproj", "{F476DDCC-AA3A-4335-8695-3A86C222E4B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD70B0CA-4CC1-49A3-A9F8-60743D7CEA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD70B0CA-4CC1-49A3-A9F8-60743D7CEA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD70B0CA-4CC1-49A3-A9F8-60743D7CEA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD70B0CA-4CC1-49A3-A9F8-60743D7CEA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F476DDCC-AA3A-4335-8695-3A86C222E4B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F476DDCC-AA3A-4335-8695-3A86C222E4B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F476DDCC-AA3A-4335-8695-3A86C222E4B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F476DDCC-AA3A-4335-8695-3A86C222E4B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34DAE7D0-C03A-4863-AAEF-78DA5432D2CA}
+	EndGlobalSection
+EndGlobal
