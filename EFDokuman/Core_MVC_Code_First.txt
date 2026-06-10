@@ -1,0 +1,49 @@
+ASP.NET CORE MVC Code-First yaklaşımı
+
+
+1:Boş MVC Core projesi yarat
+
+2:NuGet Package Manager’dan:
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SqlServer
+Microsoft.EntityFrameworkCore.Tools
+paketlerini yükle.
+
+3: Startup.cs/program.cs dosyasına gelip ConfigureService kısmına:
+xxxx.Services.AddControllersWithViews(); 
+
+builder.Services.AddDbContext<xxxxxxxContext>(options => {
+    options.UseSqlServer("Server=.;Database=xxxxx;User ID=sa;Password=1;Trust Server Certificate=True");
+});
+
+ifadesinin olup olmadığını kontrol et. yoksa yükle.
+
+4:Table Class'larını yarat.
+
+5:Context Class'ını yarat. Constructor methodlarını ekle. table classlarını dbSet olarak ekle. connection string kodunu ekle.
+        public CodeFirstDbContext()
+        {
+                
+        }
+        public CodeFirstDbContext(DbContextOptions<CodeFirstDbContext> options):base(options)
+        {
+                
+        }
+       public virtual DbSet<Personel> Personels { get; set; }
+
+       public virtual DbSet<Urun> Uruns { get; set; }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("Server=S2HOCA;Database=CodeFirstDb;User ID=sa;Password=1;Trust Server Certificate=True");
+
+6: Aşağıdaki işlemleri yapmadan önce bazen projeyi kapatıp tekrar açmak gerekebiliyor.
+
+7:“Package Manager Console” ’ u açıyoruz. 
+
+8: Add-Migration MigrationName
+
+9: Update-Database 
+
+10: Bu şekilde DB de yaratılmış oluyor. Sonra da Controller ları ve View'ları yarat.
+
+ 

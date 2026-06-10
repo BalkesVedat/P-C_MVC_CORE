@@ -1,0 +1,22 @@
+NuGet Packages: Bunlar projeye eklenecek
+Microsoft.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.EntityFrameworkCore.SqlServer
+-------------------------------------------
+
+Aşağıdaki satır, Package Manager Console (PM) den yazılacak. (Copy/paste yapıp kendi SQL makinanıza ve db ye göre düzenleyebilirsiniz)
+Tools > NuGet Package Manager > Package Manager Console 
+----------------------------------------
+Scaffold-DbContext "Server=S2HOCA;Database=Northwind;User ID=sa;Password=1;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
+----------------------------------------
+
+Scaffolding (DB den, Modellerin Class'larının kodlarının otomatik yaratılması bittikten sonra aşağıdaki kodlar "program.cs" ye yazılacak:
+------------------------------------------------
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<NorthwindContext>(options => {
+    options.UseSqlServer("Server=S2HOCA;Database=Northwind;User ID=sa;Password=1;Trust Server Certificate=True");
+});
+
+var app = builder.Build();
+----------------------------------------
